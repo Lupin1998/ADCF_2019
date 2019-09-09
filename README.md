@@ -4,7 +4,7 @@ code for Adaptive Target Tracking Algorithm with Dynamic Weighted Hierarchical C
 ## 1. Intro
  - This project includes source code for first experience in our paper based on PyTorch and usage of CNN features.
  - For models, inlcuding mainstream models from torchvision [(PyTorch)](https://pytorch.org/docs/stable/torchvision/models.html) in 
- CNNFeat. Models from tensorflow or caffe should perform better on visual tracking.
+ CNNFeat. Models from tensorflow or caffe should perform better on visual tracking, such as [(pretrained-models)](https://github.com/ZhaoJ9014/face.evoLVe.PyTorch) or [(matconvnet)](https://github.com/vlfeat/matconvnet).
 ## 2. Install
 numpy==1.14.5 
 torch==0.4.0 
@@ -15,7 +15,7 @@ matplotlib==2.1.2
 numba==0.43.1 
 pillow==6.1.0 
 ## 3. Usage
-- Download seqs [(Visual BenchMark)](http://cvlab.hanyang.ac.kr/tracker_benchmark/datasets.html) and save to Sequence. run KCF with CNN features. Choose to run different CNN in run.py.
+- Download seqs [(Visual BenchMark)](http://cvlab.hanyang.ac.kr/tracker_benchmark/datasets.html) and save to Sequence. run KCF with CNN features. Choose to run different CNN of single conv-layer or coarse-to-fine features in run.py.
 
   ```
   python run.py
