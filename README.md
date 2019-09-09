@@ -15,4 +15,12 @@ matplotlib==2.1.2
 numba==0.43.1 
 pillow==6.1.0 
 ## 3. Usage
-python run.py
+- Download seqs [(Visual BenchMark)](http://cvlab.hanyang.ac.kr/tracker_benchmark/datasets.html) and save to Sequence. run KCF with CNN features. Choose to run different CNN in run.py.
+
+  ```
+  python run.py
+  ```
+- Test old vision of KCF with hog features in 2015-KCF-DSST.
+  ```
+  python run.py
+  ```
