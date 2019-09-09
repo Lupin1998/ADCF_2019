@@ -15,12 +15,21 @@ matplotlib==2.1.2
 numba==0.43.1 
 pillow==6.1.0 
 ## 3. Usage
-- Download seqs [(Visual BenchMark)](http://cvlab.hanyang.ac.kr/tracker_benchmark/datasets.html) and save to Sequence. run KCF with CNN features. Choose to run different CNN of single conv-layer or coarse-to-fine features in run.py.
+- Download seqs [(Visual BenchMark)](http://cvlab.hanyang.ac.kr/tracker_benchmark/datasets.html) and save to Sequence. Change file path before running KCF with CNN features. Choose to run different CNN of single conv-layer or coarse-to-fine features in run.py. 
 
   ```
   python run.py
   ```
-- Test old vision of KCF with hog features in 2015-KCF-DSST.
+- Visualize different CNN feature maps in CNNfeat. Downloads MobileNet_v3 models in [(mobilenetv3)](https://github.com/xiaolai-sqlai/mobilenetv3).
+  ```
+  from PIL import Image
+  from CNN_feat.LightWeight_cnn_feat import LightWeight_feat,LightCNN
+  net = LightWeight_feat(LightCNN.SqueezeNet.value,'1_1', 1)
+  # visualize SqueezeNet-1_1 conv1
+  img = Image.open('Seq/boy/img/0001.jpg')
+  feat = net.get_cnn_feat(img,True,False,False)
+  ```
+- Test old vision of KCF with hog features in 2015-KCF-DSST. Install 'numba' before if using hog features.
   ```
   python run.py
   ```
